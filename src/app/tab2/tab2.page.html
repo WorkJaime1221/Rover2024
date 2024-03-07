@@ -1,17 +1,33 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Webs      
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+    <ion-toolbar class="header-toolbar">
+      <ion-title size="large" class="header-title">Webs</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  
+  <div class="section">
+    <h1 class="section-title camara-title">Cámara</h1>
+    <div class="iframe-container">
+      <iframe src="http://your-ip-address" class="iframe"></iframe>
+      <ion-button expand="block" class="button" (click)="navigateToIPAddress()">Go to IP Address</ion-button>
+    </div>
+  </div>
+  
+  <div class="section">
+    <h1 class="section-title brazo-title">Brazo Robótico</h1>
+    <div class="iframe-container">
+      <iframe src="http://your-ip-address" class="iframe"></iframe>
+      <ion-button expand="block" class="button" (click)="navigateToIPAddress1()">Go to IP Address</ion-button>
+    </div>
+  </div>
 </ion-content>
+
+

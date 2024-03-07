@@ -9,7 +9,9 @@ import { ChangeDetectorRef } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-  data: any;
+  //variables para almacenar los datos de la base de datos
+  dataRover: any;
+  dataCansat: any;
 
   constructor(private changeDetector: ChangeDetectorRef) {
     const firebaseConfig = {
@@ -17,12 +19,19 @@ export class Tab1Page {
     };
 
     const app = initializeApp(firebaseConfig);
-    const db = getDatabase(app);
+    const dbcansat = getDatabase(app);
+    const dbrover = getDatabase(app);
 
-    onValue(ref(db, 'ROVER-12890736/default'), (snapshot) => {
-      this.data = snapshot.val();
-      this.changeDetector.detectChanges(); // Add this line
-      console.log(this.data);
+    onValue(ref(dbcansat, 'MisionVENUS2024-12966544/default'), (snapshot) => {
+      this.dataRover = snapshot.val();
+      this.changeDetector.detectChanges(); 
+      console.log(this.dataRover);
+    });
+
+    onValue(ref(dbrover, 'ROVER-12890736/default'), (snapshot) => {
+      this.dataCansat = snapshot.val();
+      this.changeDetector.detectChanges(); 
+      console.log(this.dataCansat);
     });
   }
 }

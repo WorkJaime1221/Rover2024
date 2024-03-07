@@ -11,14 +11,6 @@ const firebaseConfig = {
   databaseURL: "https://rover2024-d1c23-default-rtdb.firebaseio.com/"
 };
 
-const app = initializeApp(firebaseConfig);
-const db = getDatabase(app);
-
-onValue(ref(db, 'ROVER-12890736/default'), (snapshot) => {
-  console.log(snapshot.val());
-});
-
-
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],

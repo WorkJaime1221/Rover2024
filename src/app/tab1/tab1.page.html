@@ -1,60 +1,54 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Data Rover/Cansat
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-card style="background: linear-gradient(to bottom right, #ff8c8c, #ff5858); border-radius: 20px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);">
-    <ion-card-header style="background-color: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); border-radius: 20px;">
-      <ion-card-title style="font-weight: bold; color: #fff; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Rover</ion-card-title>
-    </ion-card-header>
-  
-    <ion-card-content style="padding: 20px; background-color: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border-radius: 0 0 20px 20px;">
-      <ion-item lines="none" style="margin-bottom: 15px;">
-        <ion-label style="color: #333; font-weight: bold;">BMPAltura:</ion-label>
-        <ion-label style="color: #ff5858;">{{ data?.BMPAltura }}</ion-label>
-      </ion-item>
-      <ion-item lines="none" style="margin-bottom: 15px;">
-        <ion-label style="color: #333; font-weight: bold;">BMPPresion:</ion-label>
-        <ion-label style="color: #ff5858;">{{ data?.BMPPresion }}</ion-label>
-      </ion-item>
-      <ion-item lines="none" style="margin-bottom: 15px;">
-        <ion-label style="color: #333; font-weight: bold;">BMPTemperatura:</ion-label>
-        <ion-label style="color: #ff5858;">{{ data?.BMPTemperatura }}</ion-label>
-      </ion-item>
-      <ion-item lines="none" style="margin-bottom: 15px;">
-        <ion-label style="color: #333; font-weight: bold;">GPS:</ion-label>
-        <ion-label style="color: #ff5858;">{{ data?.GPS }}</ion-label>
-      </ion-item>
-      <ion-item lines="none" style="margin-bottom: 15px;">
-        <ion-label style="color: #333; font-weight: bold;">Hall:</ion-label>
-        <ion-label style="color: #ff5858;">{{ data?.Hall }}</ion-label>
-      </ion-item>
-      <ion-item lines="none" style="margin-bottom: 15px;">
-        <ion-label style="color: #333; font-weight: bold;">Humedad:</ion-label>
-        <ion-label style="color: #ff5858;">{{ data?.Humedad }}</ion-label>
-      </ion-item>
-      <ion-item lines="none" style="margin-bottom: 15px;">
-        <ion-label style="color: #333; font-weight: bold;">Temperatura:</ion-label>
-        <ion-label style="color: #ff5858;">{{ data?.Temperatura }}</ion-label>
-      </ion-item>
-      <ion-item lines="none">
-        <ion-label style="color: #333; font-weight: bold;">UV:</ion-label>
-        <ion-label style="color: #ff5858;">{{ data?.UV }}</ion-label>
-      </ion-item>
-    </ion-card-content>
-  </ion-card>
-  
-  
-  
-  
-  
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="container">
+    <ion-img src="assets/presentacion.jpg" class="presentation-image"></ion-img>
+    <div class="card-wrapper">
+      <ion-card class="data-card">
+        <ion-card-header>
+          <ion-card-title>Rover Data</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p class="data-item">BMPAltura: {{ dataRover?.BMPAltura }}</p>
+          <p class="data-item">BMPPresion: {{ dataRover?.BMPPresion }}</p>
+          <p class="data-item">BMPTemperatura: {{ dataRover?.BMPTemperatura }}</p>
+          <p class="data-item">GPS: {{ dataRover?.GPS }}</p>
+          <p class="data-item">Hall: {{ dataRover?.Hall }}</p>
+          <p class="data-item">Humedad: {{ dataRover?.Humedad }}</p>
+          <p class="data-item">Temperatura: {{ dataRover?.Temperatura }}</p>
+          <p class="data-item">UV: {{ dataRover?.UV }}</p>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card class="data-card">
+        <ion-card-header>
+          <ion-card-title>Cansat Data</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p class="data-item">BMPAltura: {{ dataCansat?.BMPAltura }}</p>
+          <p class="data-item">BMPPresion: {{ dataCansat?.BMPPresion }}</p>
+          <p class="data-item">BMPTemperatura: {{ dataCansat?.BMPTemperatura }}</p>
+          <p class="data-item">GPS: {{ dataCansat?.GPS }}</p>
+          <p class="data-item">Hall: {{ dataCansat?.Hall }}</p>
+          <p class="data-item">Humedad: {{ dataCansat?.Humedad }}</p>
+          <p class="data-item">Temperatura: {{ dataCansat?.Temperatura }}</p>
+          <p class="data-item">UV: {{ dataCansat?.UV }}</p>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
 </ion-content>
+
+<ion-header collapse="condense">
+  <ion-toolbar>
+    <ion-title size="large">Data Rover/Cansat
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+

@@ -1,0 +1,48 @@
+.section-title {
+    font-size: 28px; /* Adjust the font size */
+    margin-bottom: 10px; /* Add spacing below the title */
+    font-family: Arial, sans-serif; /* Apply a specific font family */
+  }
+  
+  .camara-title {
+    color: #BF9004; /* BF9004 */
+  }
+  
+  .brazo-title {
+    color: #D90404; /* D90404 */
+  }
+  
+  .header-toolbar {
+    --background: #D9042B; /* D9042B */
+    color: #F2F2F2; /* F2F2F2 */
+  }
+  
+  .header-title {
+    color: #F2F2F2; /* F2F2F2 */
+  }
+  
+  .iframe-container {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .iframe {
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+    border: none;
+  }
+  
+  .button {
+    --background: #D90404; /* D90404 */
+    --color: #F2F2F2; /* F2F2F2 */
+    margin-top: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .button:hover {
+    --background: #BF9004; /* BF9004 */
+  }
+  
